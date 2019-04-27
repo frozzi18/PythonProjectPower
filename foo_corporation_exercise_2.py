@@ -1,5 +1,4 @@
 class Employee:
-
     salary = 0
 
     def __init__(self, name, professional_level, base_pay, hours_worked):
@@ -15,7 +14,7 @@ class Employee:
         else:
             if self.hours_worked > 40:
                 salary = self.hours_worked * self.hours_worked
-                salary = salary + (self.hours_worked-40) * self.base_pay * 0.5
+                salary = salary + (self.hours_worked - 40) * self.base_pay * 0.5
                 print("Good Overtime. The salary is ", salary)
             else:
                 salary = self.hours_worked * self.hours_worked
@@ -23,8 +22,8 @@ class Employee:
             return True
 
     def salary(self):
-        salary = self.base_pay*self.hours_worked
-        print("Total salary for "+self.name+" is "+str(salary)+" dollar")
+        salary = self.base_pay * self.hours_worked
+        print("Total salary for " + self.name + " is " + str(salary) + " dollar")
 
     def office(self):
         if self.professional_level == "A":
@@ -39,10 +38,10 @@ class Manager(Employee):
         self.officeNumber = office_number
 
     def office_number(self):
-       if self.professional_level == "A":
-           print("Manager " + self.name + " has an individual office room in", self.officeNumber)
-       elif self.professional_level == "B":
-           print(self.name, "has a cubicle room \n")
+        if self.professional_level == "A":
+            print("Manager " + self.name + " has an individual office room in", self.officeNumber)
+        elif self.professional_level == "B":
+            print(self.name, "has a cubicle room \n")
 
 
 name = ["John", "Graham", "Annabel", "Margaret"]
@@ -75,25 +74,3 @@ for x in range(len(name_manager)):
     if manager_list[x].check():
         manager_list[x].salary()
         manager_list[x].office_number()
-
-    # for (int i=0; i < nameManager.length;i++) {
-    #     System.out.println("The manager name is " + managerList.get(i).name);
-    # if (managerList.get(i).check()) {
-    # managerList.get(i).salary();
-    # managerList.get(i).hasOffice();
-    # }
-    # }
-
-# John = Employee("John", "B", 7.5, 38)
-# John.check()
-# John.salary()
-# John.office()
-#
-# John = Manager("John", "A", 7.5, 38, "A415")
-# John.salary()
-# John.office()
-# John.office_number()
-
-
-
-
