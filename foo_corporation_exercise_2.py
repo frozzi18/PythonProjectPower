@@ -55,11 +55,34 @@ base_pay_manager = [15.00, 16.50]
 hours_worked_manager = [49, 47]
 office_number = ["A332", "A415"]
 
-employee_list =[Employee("John", "A", 7.5, 38), Manager("Bill", "A", 15.50, 39, "A332")]
-print(employee_list[0].name)
+employee_list =[]
+manager_list=[]
 
 for x in range(len(name)):
     employee_list.append(Employee(name[x], professional_level[x], base_pay[x], hours_worked[i]))
+
+for x in range(len(name_manager)):
+    manager_list.append(Manager(name[x], professional_level[x], base_pay[x], hours_worked[i], office_number[i]))
+
+for x in range(len(name)):
+    print("The employee name is " + employee_list[i].name)
+    if employee_list[i].check():
+        employee_list[i].salary()
+        employee_list[i].office()
+
+for x in range(len(name_manager)):
+    print("The manager name is " + manager_list[i].name)
+    if manager_list[i].check():
+        manager_list[i].salary()
+        manager_list[i].office_number()
+
+    # for (int i=0; i < nameManager.length;i++) {
+    #     System.out.println("The manager name is " + managerList.get(i).name);
+    # if (managerList.get(i).check()) {
+    # managerList.get(i).salary();
+    # managerList.get(i).hasOffice();
+    # }
+    # }
 
 # John = Employee("John", "B", 7.5, 38)
 # John.check()
