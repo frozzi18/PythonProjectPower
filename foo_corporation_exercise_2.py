@@ -47,7 +47,7 @@ class Manager(Employee):
 
 name = ["John", "Graham", "Annabel", "Margaret"]
 professional_level = ["B", "B", "A", "B"]
-base_pay = {8.50, 9.00, 9.20, 7.80}
+base_pay = [8.50, 9.00, 9.20, 7.80]
 hours_worked = [35, 37, 43, 45]
 name_manager = ["Bill", "Gregory"]
 professional_level_manager = ["A", "A"]
@@ -55,26 +55,26 @@ base_pay_manager = [15.00, 16.50]
 hours_worked_manager = [49, 47]
 office_number = ["A332", "A415"]
 
-employee_list =[]
-manager_list=[]
+employee_list = []
+manager_list = []
 
 for x in range(len(name)):
-    employee_list.append(Employee(name[x], professional_level[x], base_pay[x], hours_worked[i]))
+    employee_list.append(Employee(name[x], professional_level[x], base_pay[x], hours_worked[x]))
 
 for x in range(len(name_manager)):
-    manager_list.append(Manager(name[x], professional_level[x], base_pay[x], hours_worked[i], office_number[i]))
+    manager_list.append(Manager(name[x], professional_level[x], base_pay[x], hours_worked[x], office_number[x]))
 
 for x in range(len(name)):
-    print("The employee name is " + employee_list[i].name)
-    if employee_list[i].check():
-        employee_list[i].salary()
-        employee_list[i].office()
+    print("The employee name is " + employee_list[x].name)
+    if employee_list[x].check():
+        employee_list[x].salary()
+        employee_list[x].office()
 
 for x in range(len(name_manager)):
-    print("The manager name is " + manager_list[i].name)
-    if manager_list[i].check():
-        manager_list[i].salary()
-        manager_list[i].office_number()
+    print("The manager name is " + manager_list[x].name)
+    if manager_list[x].check():
+        manager_list[x].salary()
+        manager_list[x].office_number()
 
     # for (int i=0; i < nameManager.length;i++) {
     #     System.out.println("The manager name is " + managerList.get(i).name);
