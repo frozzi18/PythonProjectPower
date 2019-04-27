@@ -33,9 +33,44 @@ class Employee:
             print(self.name, "has a cubicle room \n")
 
 
-John = Employee("John", "B", 7.5, 38)
-John.salary()
-John.office()
+class Manager(Employee):
+    def __init__(self, name, professional_level, base_pay, hours_worked, office_number):
+        Employee.__init__(self, name, professional_level, base_pay, hours_worked)
+        self.officeNumber = office_number
+
+    def office_number(self):
+       if self.professional_level == "A":
+           print("Manager " + self.name + " has an individual office room in", self.officeNumber)
+       elif self.professional_level == "B":
+           print(self.name, "has a cubicle room \n")
+
+
+name = ["John", "Graham", "Annabel", "Margaret"]
+professional_level = ["B", "B", "A", "B"]
+base_pay = {8.50, 9.00, 9.20, 7.80}
+hours_worked = [35, 37, 43, 45]
+name_manager = ["Bill", "Gregory"]
+professional_level_manager = ["A", "A"]
+base_pay_manager = [15.00, 16.50]
+hours_worked_manager = [49, 47]
+office_number = ["A332", "A415"]
+
+employee_list =[Employee("John", "A", 7.5, 38), Manager("Bill", "A", 15.50, 39, "A332")]
+print(employee_list[0].name)
+
+for x in range(len(name)):
+    employee_list.append(Employee(name[x], professional_level[x], base_pay[x], hours_worked[i]))
+
+# John = Employee("John", "B", 7.5, 38)
+# John.check()
+# John.salary()
+# John.office()
+#
+# John = Manager("John", "A", 7.5, 38, "A415")
+# John.salary()
+# John.office()
+# John.office_number()
+
 
 
 
